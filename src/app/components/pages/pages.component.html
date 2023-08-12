@@ -1,5 +1,26 @@
 <p>pages works!</p>
 
+<div class="container" *ngIf="items.length <= 0; else template">No hay informacion</div>
+
+<ng-template #template>
+  <ul>  <!-- ahora veamos el ngfor
+        El li se repetira tantas veces como elementos haya en el array de items y items lo traemos
+        del archivo TS que de cierta forma es nuestro back o code behind
+        esta pintando obecjt porque como tal es un objeto y no es directamente un string
+        boleano o numerico, como mostramos estos valores
+        -->
+    <li *ngFor="let item of items">
+      {{item.nombre}} - {{item.edad}} - {{item.activo}}
+      <!-- debemos usar {{}} ya que estan conteniendo informacion que angular reconoce -->
+    </li>
+  </ul>
+</ng-template>
+<!--
+  aqui podemos usar un div o un nuevo elemento llamado template que es propio de angular
+  la ventaja de usar el template es que solo se crea y se invoca si el if asi lo dispone
+  si usamos la negacion del if angular evalua 2 veces, vamos
+-->
+
 <mi-header></mi-header>
 <app-body></app-body>
 <app-footer></app-footer>
