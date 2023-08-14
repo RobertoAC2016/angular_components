@@ -12,7 +12,8 @@ export class PagesComponent {
   // podremos usar fuera del archivo TS y la necesitaremos en el HTML en su template
   // veamos como es esto, cambiemos a private y vemos q pasa
   // este al ser un objeto como tal no me deja inicializarlo como clase, ya se usa directamente
-  public items = users;
+  // public items = users;
+  public items = [];
 /**
  * vamos a trabajar con las directivas ngIf y ngFor de angular para la toma de
  * desiciones y ciclos en el html y no es como codigo JS y TS aunque tamben

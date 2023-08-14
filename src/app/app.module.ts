@@ -10,6 +10,9 @@ import { FooterComponent } from './components/pages/footer/footer.component';
 import { LeftComponent } from './components/pages/body/left/left.component';
 import { RightComponent } from './components/pages/body/right/right.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { RightComponent } from './components/pages/body/right/right.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

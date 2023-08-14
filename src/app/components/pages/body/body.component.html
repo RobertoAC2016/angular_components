@@ -1,4 +1,13 @@
 <p>body works!</p>
 
-<app-left></app-left>
-<app-right></app-right>
+<h2>Veamos la magia de los servicios para consultar APIs</h2>
+
+<div *ngIf="!items; else template">No hay informacion</div>
+
+<ng-template #template>
+  <ul>
+    <li *ngFor="let item of items">
+      {{item.id}} - {{item.name}}
+    </li>
+  </ul>
+</ng-template>
